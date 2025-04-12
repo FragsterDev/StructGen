@@ -2,17 +2,16 @@
 
 StructGen is a lightweight VS Code extension that helps you **generate complex folder structures** from a simple JSON input. It's great for scaffolding domain-driven folder architectures in seconds.
 
+## Version
+
+- **Current Version**: 1.0.0
+
 ### Requirements
 
 - **Node.js**: v22.14.0  
 - **npm**: v10.9.2  
 - **VS Code**: Latest stable version recommended
-- **VSCE (Visual Studio Code Extension Manager)**:  
-  Install globally using:
 
-  ```bash
-  npm install -g vsce
-  ```
 
 ## Installation
 
