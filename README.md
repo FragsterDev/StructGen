@@ -15,16 +15,28 @@ StructGen is a lightweight VS Code extension that helps you **generate complex f
 
 ## Installation
 
-To install **StructGen** for use as a Visual Studio Code extension:
+To install **StructGen** for use as a Visual Studio Code extension, you can follow these simple steps:
 
-1. Open your terminal.
-2. Run the following command to directly install the extension:
+### 1. Install the extension using a single command
 
-   ```bash
-   code --install-extension https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix
-   ```
+Open your terminal and run the following command to download and install the extension:
 
----
+For **Windows** (PowerShell):
+
+```powershell
+curl -L https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix -o structgen-1.0.0.vsix; code --install-extension structgen-1.0.0.vsix
+```
+
+For **macOS/Linux** (Bash terminal):
+```bash
+curl -L https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix -o structgen-1.0.0.vsix && code --install-extension structgen-1.0.0.vsix
+```
+
+This will download the `.vsix` file and install the extension automatically in Visual Studio Code.
+
+### 2. Verify Installation
+
+Once the installation is complete, you can verify that the extension is installed by checking the Extensions view in Visual Studio Code (`Ctrl+Shift+X`) and searching for StructGen.
 
 ## Features
 
