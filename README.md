@@ -24,17 +24,17 @@ Open your terminal and run the following command to download and install the ext
 For **Windows** (PowerShell):
 
 ```powershell
-curl.exe -L "https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix" -o "structgen-1.0.0.vsix" code --install-extension structgen-1.0.0.vsix
+powershell -Command "curl.exe -L 'https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix' -o $env:TEMP\structgen.vsix; code --install-extension $env:TEMP\structgen.vsix; rm $env:TEMP\structgen.vsix"
 ```
 
 For **Windows** (CMD):
 ```cmd
-curl -o structgen-1.0.0.vsix https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix && code --install-extension structgen-1.0.0.vsix
+curl -L "https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix" -o "%TEMP%\structgen.vsix" && code --install-extension "%TEMP%\structgen.vsix" && del "%TEMP%\structgen.vsix"
 ```
 
 For **macOS/Linux** (Bash terminal):
 ```bash
-curl -L https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix -o structgen-1.0.0.vsix && code --install-extension structgen-1.0.0.vsix
+curl -L https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix -o /tmp/structgen.vsix && code --install-extension /tmp/structgen.vsix && rm /tmp/structgen.vsix
 ```
 
 This will download the `.vsix` file and install the extension automatically in Visual Studio Code.
