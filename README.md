@@ -1,71 +1,105 @@
-# structgen README
+# StructGen
 
-This is the README for your extension "structgen". After writing up a brief description, we recommend including the following sections.
+StructGen is a lightweight VS Code extension that helps you **generate complex folder structures** from a simple JSON input. It's great for scaffolding domain-driven folder architectures in seconds.
 
-## Features
+### Requirements
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Node.js**: v22.14.0  
+- **npm**: v10.9.2  
+- **VS Code**: Latest stable version recommended
+- **VSCE (Visual Studio Code Extension Manager)**:  
+  Install globally using:
 
-For example if there is an image subfolder under your extension project workspace:
+  ```bash
+  npm install -g vsce
+  ```
 
-\!\[feature X\]\(images/feature-x.png\)
+## Installation
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+To install **StructGen** for use as a Visual Studio Code extension:
 
-## Requirements
+Install the **StructGen** extension from the VS Code Marketplace using the VSCE (Visual Studio Code Extension) package:
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+1. Open your terminal and run the following command:
+   ```bash
+   vsce install StructGen
+   ```
+Alternatively, you can install it directly from the VS Code Marketplace by searching for StructGen.
 
 ---
 
-## Following extension guidelines
+## Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- Generate nested folders and files instantly from a single JSON file.
+- Supports nested object structure and arrays of files.
+- Perfect for backend architecture, monorepos, or boilerplate setups.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## How to Use
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+1. Open any folder in VS Code.
+2. Press `Cmd+Shift+P` / `Ctrl+Shift+P` to open Command Palette.
+3. Search and run: `Generate Folder Structure`.
+4. Choose your JSON file describing the structure.
+5. Done
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## Example Input
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+```json
+{
+  "data": {
+    "datasource": "mongo_datasource.go",
+    "repository": "mongo_repository.go"
+  },
+  "domain": {
+    "entities": "user_entity.go",
+    "repository": "user_repository.go",
+    "usecases": ["create_user.go", "get_users.go", "delete_users.go"]
+  },
+  "presentation": {
+    "http": {
+      "routes": "user_routes.go",
+      "middleware": "user_middleware.go",
+      "controller": "user_controller.go"
+    }
+  }
+}
+```
 
-**Enjoy!**
+
+## Output
+
+![Output Image](example/output-example.png)
+
+
+## Collaboration Instructions
+
+To contribute to **StructGen** or collaborate with others, follow these steps:
+
+### 1. Clone the Repository
+
+Clone the project repository by running the following command in your terminal:
+
+```bash
+git clone https://github.com/your-username/structgen.git
+```
+
+### 2. Install Dependencies
+
+Navigate to the project directory and install the necessary npm packages:
+
+```bash
+cd structgen
+npm install
+```
+
+### 3. Run the Extension Locally
+
+You can test the extension locally within VS Code:
+
+1. Open the project folder in **Visual Studio Code**.
+2. Press `F5` to start the extension in a new VS Code window (**Extension Development Host**).
+3. In the new window, open any folder and run the `Generate Folder Structure` command from the **Command Palette** to test the functionality.
