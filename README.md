@@ -24,7 +24,12 @@ Open your terminal and run the following command to download and install the ext
 For **Windows** (PowerShell):
 
 ```powershell
-curl -L https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix -o structgen-1.0.0.vsix; code --install-extension structgen-1.0.0.vsix
+curl.exe -L "https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix" -o "structgen-1.0.0.vsix" code --install-extension structgen-1.0.0.vsix
+```
+
+For **Windows** (CMD):
+```cmd
+curl -o structgen-1.0.0.vsix https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix && code --install-extension structgen-1.0.0.vsix
 ```
 
 For **macOS/Linux** (Bash terminal):
@@ -48,11 +53,18 @@ Once the installation is complete, you can verify that the extension is installe
 
 ## How to Use
 
-1. Open any folder in VS Code.
-2. Press `Cmd+Shift+P` / `Ctrl+Shift+P` to open Command Palette.
+1. Open VS Code in any workspace.
+2. Press `Cmd+Shift+P (macOS)` or `Ctrl+Shift+P (Windows/Linux)` to open the Command Palette.
 3. Search and run: `Generate Folder Structure`.
-4. Choose your JSON file describing the structure.
-5. Done
+4. First, select the target directory where you want to create the folder structure.
+5. Then, select your `JSON file` describing the structure.
+6. The folder structure will be `generated` in your `selected directory!`
+
+The extension will process your JSON structure and create folders and files accordingly:
+
+1. Keys `without` file extensions become `folders`
+2. Keys `with` file extensions become `files` with the `specified content`
+3. `Arrays` of objects with `filename/content pairs` are properly handled
 
 ---
 
