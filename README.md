@@ -18,13 +18,12 @@ StructGen is a lightweight VS Code extension that helps you **generate complex f
 
 To install **StructGen** for use as a Visual Studio Code extension:
 
-Install the **StructGen** extension from the VS Code Marketplace using the VSCE (Visual Studio Code Extension) package:
+1. Open your terminal.
+2. Run the following command to directly install the extension:
 
-1. Open your terminal and run the following command:
    ```bash
-   vsce install StructGen
+   code --install-extension https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix
    ```
-Alternatively, you can install it directly from the VS Code Marketplace by searching for StructGen.
 
 ---
 

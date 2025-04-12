@@ -2,7 +2,7 @@
   "name": "structgen",
   "displayName": "StructGen",
   "description": "A simple tool to generate folder structure quickly in VS Code",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "Pratik Sharma",
   "engines": {
     "vscode": "^1.99.0"
