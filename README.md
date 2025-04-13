@@ -98,7 +98,7 @@ The extension will process your JSON structure and create folders and files acco
 
 1. Keys `without` file extensions become `folders`
 2. Keys `with` file extensions become `files` with the `specified content`
-3. `Arrays` of objects with `filename/content pairs` are properly handled
+3. See the example below to learn more.
 
 ---
 
