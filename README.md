@@ -4,17 +4,18 @@ StructGen is a lightweight VS Code extension that helps you **generate complex f
 
 ## Version
 
-- **Current Version**: 1.0.0
+- **Current Version**: v1.0.0
 
 ### Requirements
 
-- **Node.js**: v22.14.0  
-- **npm**: v10.9.2  
+- **Node.js**: v22.14.0^
+- **npm**: v10.9.2^
 - **VS Code**: Latest stable version recommended
 
 
 ## Installation
 
+### Method 1: Automatic Installation
 To install **StructGen** for use as a Visual Studio Code extension, you can follow these simple steps:
 
 ### 1. Install the extension using a single command
@@ -38,6 +39,39 @@ curl -L https://github.com/FragsterDev/StructGen/releases/download/StructGen/str
 ```
 
 This will download the `.vsix` file and install the extension automatically in Visual Studio Code.
+
+### Method 2: Manual Installation (if automatic install fails)
+
+### Step 1: Download the VSIX File
+Download the extension package using one of these methods:
+
+1. **From GitHub Releases**:
+   - Visit the [StructGen Releases page](https://github.com/FragsterDev/StructGen/releases)
+   - Download `structgen-1.0.0.vsix` from the "Assets" section
+
+2. **Direct Download** (recommended):  
+   ▶️ [Download structgen-1.0.0.vsix now](https://github.com/FragsterDev/StructGen/releases/download/StructGen/structgen-1.0.0.vsix)  
+   *(Right-click → "Save Link As" if needed)*
+
+### Step 2: Install via VS Code Command
+Open a terminal (where you have downloaded the release file) and run:
+
+```bash
+code --install-extension path/to/structgen-1.0.0.vsix
+```
+
+### Installation Path Examples
+
+### Windows
+```cmd
+code --install-extension "%USERPROFILE%\Downloads\structgen-1.0.0.vsix"
+```
+
+### macOS/Linux Installation
+
+```bash
+code --install-extension "$HOME/Downloads/structgen-1.0.0.vsix"
+```
 
 ### 2. Verify Installation
 
@@ -122,3 +156,8 @@ You can test the extension locally within VS Code:
 1. Open the project folder in **Visual Studio Code**.
 2. Press `F5` to start the extension in a new VS Code window (**Extension Development Host**).
 3. In the new window, open any folder and run the `Generate Folder Structure` command from the **Command Palette** to test the functionality.
+
+
+## License 
+
+### Distributed under MIT License. See `LICENSE.md` for more information.
