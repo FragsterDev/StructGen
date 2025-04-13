@@ -69,28 +69,25 @@ The extension will process your JSON structure and create folders and files acco
 ---
 
 ## Example Input
-
 ```json
 {
-  "data": {
-    "datasource": "mongo_datasource.go",
-    "repository": "mongo_repository.go"
-  },
-  "domain": {
-    "entities": "user_entity.go",
-    "repository": "user_repository.go",
-    "usecases": ["create_user.go", "get_users.go", "delete_users.go"]
-  },
-  "presentation": {
-    "http": {
-      "routes": "user_routes.go",
-      "middleware": "user_middleware.go",
-      "controller": "user_controller.go"
-    }
+  "src": {
+    "folder1": {
+      "file1.py": "#file content" 
+    },
+    "folder2": {
+      "file1.py": "#file content" 
+    },
+    "file3.py": "#file content",
+    "folder3": {
+      "folder4": {
+        "file-in-folder-4.py": "# content in folder 4"
+      }
+    },
+    "main.py": "# content in main"
   }
 }
 ```
-
 
 ## Output
 
