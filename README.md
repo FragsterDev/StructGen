@@ -8,10 +8,11 @@ StructGen is a lightweight VS Code extension that helps you **generate complex f
 
 ### Requirements
 
-- **Node.js**: v22.14.0^
-- **npm**: v10.9.2^
 - **VS Code**: Latest stable version recommended
 
+### For contributing:
+- **Node.js**: v22.14.0^
+- **npm**: v10.9.2^
 
 ## Installation
 
